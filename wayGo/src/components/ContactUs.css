@@ -1,0 +1,17 @@
+.ContactUs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(142, 170, 253);
+    color: white;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .contactUs-content {
+    text-align: center;
+    padding: 2rem;
+  }
+

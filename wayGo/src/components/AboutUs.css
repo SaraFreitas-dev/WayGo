@@ -1,0 +1,25 @@
+.AboutUs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: white;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .about-content {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+
+  .imgAbout{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 350px;
+    margin-top: -2rem;
+  }
+

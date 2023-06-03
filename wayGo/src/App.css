@@ -1,0 +1,121 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content_main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border: none;
+  min-width: 90%;
+  min-height: 90%;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 8rem;
+  margin-right: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: lighter;
+}
+
+
+.small-text {
+  font-size: 1rem;
+  font-weight: lighter;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+
+@keyframes revealText {
+  from {
+    opacity: 0;
+    transform: translateX(-15%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes revealSlow {
+  from {
+    opacity: 0;
+    transform: translateX(-105%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes revealReverse {
+  from {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+  }
+
+
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+  }
+}
