@@ -5,8 +5,9 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import '../App.css';
 import './AboutUs.css';
-import car from '../assets/car.png';
-import aboutTitle from '../assets/aboutTitle.gif';
+import aboutVideo from "../assets/about-video.mp4";
+import carCanva from "../assets/carCanva.mp4";
+
 
 const AboutUs = () => {
 
@@ -15,40 +16,69 @@ const AboutUs = () => {
         hidden: { opacity: 0, scale: 0 }
       };
 
-        const control = useAnimation();
-        const [ref, inView] = useInView();
-      
-        useEffect(() => {
-          if (inView) {
-            control.start("visible");
-          } else {
-            control.start("hidden");
-          }
-        }, [control, inView]);
-
+      const control = useAnimation();
+      const [ref, inView] = useInView({
+        threshold: 0.5, // to make sure the animation triggers
+      });
+      useEffect(() => {
+        if (inView) {
+          control.start("visible");
+        } else {
+          control.start("hidden");
+        }
+      }, [control, inView]);
+    
+    
 
   return (
     <section
       className="AboutUs"
       id="about-us">
-      <div className="about-content">
+      
+
       <motion.div
-      className="about-content"
+      className="AboutUs"
       ref={ref}
       variants={boxVariant}
       initial="hidden"
       animate={control}
     >
-        <motion.div   whileHover={{scale: 1.1, rotate: [0, -5, 5, -5, 0] }}>
-                    <img className="imgAbout" src={aboutTitle} autoPlay loop muted />
-                    </motion.div>
-        <h3>About Us</h3>
+        
+
+        <div className="video-container">
+  <video className="about-video" src={aboutVideo} autoPlay loop muted />
+</div>
+
+
+      <div className="about-content">
+        <video className="corner-video" src={carCanva} autoPlay loop muted />
+        <motion.div   whileHover={{scale: 1.3, rotate: [0, -10, 10, -10, 0] }}>
+                    
+       <div className="slime-bubble green">
+  <h2 className="about-title">About Us</h2>
+</div>
+         </motion.div>
+
+
         <p>This is the About Us section content.</p>
         <p>Who we are, when it started.</p>
-        <p>Our mission</p>
-        <p>A simpler page with some animations with owners and car</p>
-        </motion.div>
-      </div>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+        <p>A simpler page with some animations with owners and car. </p>
+        <br></br>
+        <br></br>
+
+        <motion.div   whileHover={{scale: 1.3, rotate: [0, -10, 10, -10, 0] }}>
+        <div className="slime-bubble violet">
+    <h2 className="about-title">Our Mission</h2>
+  </div>
+  </motion.div>
+
+        <p>This is the About Us section content.</p>
+        <p>Who we are, when it started.</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+        </div>
+
+</motion.div>
     </section>
   );
 };

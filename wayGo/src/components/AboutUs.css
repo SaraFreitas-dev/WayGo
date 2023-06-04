@@ -1,25 +1,232 @@
 .AboutUs {
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background: white;
-    width: 100%;
-    height: 100%;
+    position: relative;
+    background-color: #f0f8ff;
+    z-index: 0;
     object-fit: cover;
   }
+
+
   
   .about-content {
     text-align: center;
-    padding: 2rem;
+    padding: 4rem;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   
-
-  .imgAbout{
-    position: relative;
+  .corner-video {
+    position: absolute;
+    top: 3rem;
+    right: -1rem;
     width: 100%;
-    height: 100%;
-    max-width: 350px;
-    margin-top: -2rem;
+    max-width: 250px;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.9;
   }
 
+  .slime-bubble {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    /*background-color: #7bed9f;*/
+    background-color: rgb(38, 29, 70);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    z-index: -1;
+    margin-left: auto;
+    margin-right: auto;
+    /* Animation */
+    animation-name: float;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transition: all 0.3s ease;
+  }
+
+  .slime-bubble h2{
+    font-size: 1.7rem;
+    margin: 1rem;
+  }
+  
+  .slime-bubble:before,
+  .slime-bubble:after {
+    content: "";
+    position: absolute;
+    width: 140%;
+    height: 140%;
+    border-radius: 50%;
+    z-index: -1;
+   /* background-color: #7bed9f;*/
+   background-color: rgb(38, 29, 70);
+    animation: pulse 3s infinite;
+  }
+  
+  .slime-bubble:before {
+    animation-delay: 0.5s;
+  }
+  
+  .slime-bubble:after {
+    animation-delay: 1s;
+  }
+  
+  .slime-bubble:hover {
+    transform: scale(1.3);
+  }
+
+  .slime-bubble h2:hover {
+   font-size: 1.8rem;
+  }
+  
+  .slime-bubble.violet {
+    /*background-color: violet;*/
+    background-color: rgb(38, 29, 70);
+  }
+  
+  .slime-bubble.violet:before,
+  .slime-bubble.violet:after {
+   /* background-color: violet;*/
+   background-color: rgb(38, 29, 70);
+  }
+  
+  .slime-bubble.violet:hover {
+    transform: scale(1.3);
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(2);
+      opacity: 0.2;
+    }
+    100% {
+      transform: scale(0);
+      opacity: 0.5;
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .about-title {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .imgAbout {
+    position: relative;
+    height: 100%;
+    max-height: 250px;
+    margin-bottom: 1rem;
+  }
+  
+  .video-container {
+    display: flex;
+    z-index: 2;
+  }
+  
+  .about-video {
+    width: 100%;
+    max-width: 450px;
+    margin-top: auto;
+  }
+  
+  @media (max-width: 1000px) {
+    .imgAbout {
+      max-height: 200px;
+    }
+  
+    .video-container {
+      margin: 1rem;
+      max-width: 300px;
+    }
+  
+    .slime-bubble {
+      width: 130px;
+      height: 130px;
+    }
+        .about-content {
+      padding: 2rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+    .corner-video{
+        opacity: 0.4;
+        top: 20%;
+     }
+ 
+  
+  }
+  
+  @media (max-width: 750px) {
+    .AboutUs {
+      flex-direction: column;
+    }
+  
+    .about-content {
+      padding: 2rem 1rem; /* Add equal left and right padding */
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  
+    .about-content p {
+      margin-left: 1rem;
+      margin-right: 1rem; 
+    }
+  
+    .imgAbout {
+      max-height: 100px;
+      margin-top: -2rem;
+    }
+  
+    .video-container {
+      margin: 0rem;
+      max-width: 150px;
+    }
+  
+    .AboutUs h3 {
+      font-size: 1rem;
+    }
+  
+    .AboutUs p {
+      font-size: 0.9rem;
+    }
+
+    .corner-video{
+        top: -15%;
+     }
+ 
+
+  }
+  

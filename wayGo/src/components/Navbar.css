@@ -3,7 +3,8 @@
     z-index: 999; 
     font-size: 1.3rem;
     margin: 0;
-    padding: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
     top: 2rem;
   }
   
@@ -33,7 +34,22 @@
     .navbar {
         font-size: 1rem;
       }
+
+
+  @media (max-width: 460px) {
+    .navbar-item {
+        margin-right: 0px;
+        margin-left: 1rem;
+      }
+
+      .navbar {
+        top: 3rem;
+      }
+      
   }
-  
+
+}
+
+
 
   

@@ -12,8 +12,6 @@ const Services = () => {
         hidden: { opacity: 0, scale: 0 }
       };
 
-
-
         const control = useAnimation();
         const [ref, inView] = useInView();
       
@@ -24,6 +22,7 @@ const Services = () => {
             control.start("hidden");
           }
         }, [control, inView]);
+
 
 
   return (

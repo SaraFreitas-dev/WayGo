@@ -7,8 +7,22 @@
     background: white;
     width: 100%;
     height: 100%;
-    object-fit: cover;
   }
+
+  .Reviews::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/bmw.jpg");
+    background-size: cover;
+    background-position: center top; /* Adjust the background position */
+    filter: blur(0.2rem);
+    z-index: -1; /* Ensure the pseudo-element is behind the content */
+  }
+  
   
   .reviews-content {
     text-align: center;
