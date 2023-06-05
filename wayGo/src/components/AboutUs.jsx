@@ -7,6 +7,7 @@ import '../App.css';
 import './AboutUs.css';
 import aboutVideo from "../assets/about-video.mp4";
 import carCanva from "../assets/carCanva.mp4";
+import interiorCar from "../assets/interiorCar.mp4"
 
 
 const AboutUs = () => {
@@ -35,6 +36,7 @@ const AboutUs = () => {
       className="AboutUs"
       id="about-us">
       
+      <video className="interiorCar" src={interiorCar} autoPlay loop muted />
 
       <motion.div
       className="AboutUs"
@@ -51,7 +53,7 @@ const AboutUs = () => {
 
 
       <div className="about-content">
-        <video className="corner-video" src={carCanva} autoPlay loop muted />
+      {/*  <video className="corner-video" src={carCanva} autoPlay loop muted /> */}
         <motion.div   whileHover={{scale: 1.3, rotate: [0, -10, 10, -10, 0] }}>
                     
        <div className="slime-bubble green">

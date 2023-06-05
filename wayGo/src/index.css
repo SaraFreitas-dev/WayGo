@@ -2,6 +2,13 @@
   margin: 0;
   padding: 0;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+  /*THIS PREVENTS COPYING TEXT IN WEBSITE*/
+  -webkit-touch-callout: none; /* Disable callout menu */
+  -webkit-user-select: none; /* Disable text selection */
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 body{

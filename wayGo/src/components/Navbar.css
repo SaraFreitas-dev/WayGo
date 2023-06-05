@@ -1,13 +1,12 @@
 .navbar {
     position: fixed;
-    z-index: 999; 
+    z-index: 999;
     font-size: 1.3rem;
     margin: 0;
     padding-left: 1rem;
     padding-right: 1rem;
     top: 2rem;
   }
-  
   
   .navbar-list {
     display: flex;
@@ -17,39 +16,101 @@
   }
   
   .navbar-item {
+    color: rgb(40, 40, 40);
     margin-right: 10px;
     cursor: pointer;
-    font-weight: bold;
-    color: #333;
     margin-left: 2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
   }
   
   .navbar-item:hover {
-    color: rgb(27, 26, 26);
-    transform: scale(1.3);
+    transform: scale(2);
+    transition: color 0.3s ease, transform 0.3s ease;
   }
-
-
+  
+  
   @media (max-width: 750px) {
     .navbar {
-        font-size: 1rem;
-      }
-
-
-  @media (max-width: 460px) {
-    .navbar-item {
-        margin-right: 0px;
-        margin-left: 1rem;
-      }
-
-      .navbar {
-        top: 3rem;
+      font-size: 1rem;
+    }
+  
+    .navbar-list {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        background-color: rgb(40, 39, 39);
+        color: white;
+        flex-direction: column;
+        align-items: center;
+        z-index: 999;
+        opacity: 0; /* Initially hidden */
+        transform: scale(0.1); /* Initially small size */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Animation transition */
       }
       
+      .navbar-open .navbar-list {
+        display: flex;
+        opacity: 1; /* Show the menu */
+        transform: scale(1); /* Expand the menu */
+      }
+      
+  
+    .navbar-item {
+      margin: 0;
+      margin-top: 2rem;
+      font-weight: bold;
+      color: white;
+      margin-right: 0;
+      margin-left: 1rem;
+    }
+  
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .navbar-hamburger {
+      display: block;
+      position: fixed;
+      top: 1.5rem;
+      left: 1.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: linear-gradient(to top, rgb(94, 91, 91), rgb(160, 159, 159));
+      z-index: 1000;
+      cursor: pointer;
+      justify-content: center;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .navbar-hamburger:hover {
+        transform: scale(1.3) rotate(360deg);
+      }
+  
+    /*Stripes on hamburger menu*/
+    .navbar-hamburger span {
+      display: block;
+      width: 50%;
+      height: 2px;
+      background-color: white;
+      margin: 6px auto;
+      justify-content: center;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+  
+    .navbar-open .navbar-list {
+      display: flex;
+    }
+  
   }
-
-}
-
-
-
   
