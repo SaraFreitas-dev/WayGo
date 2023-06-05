@@ -6,9 +6,6 @@ import { useEffect } from "react";
 import '../App.css';
 import './AboutUs.css';
 import aboutVideo from "../assets/about-video.mp4";
-import carCanva from "../assets/carCanva.mp4";
-import interiorCar from "../assets/interiorCar.mp4"
-
 
 const AboutUs = () => {
 
@@ -19,7 +16,7 @@ const AboutUs = () => {
 
       const control = useAnimation();
       const [ref, inView] = useInView({
-        threshold: 0.5, // to make sure the animation triggers
+        threshold: 0.1, // to make sure the animation triggers
       });
       useEffect(() => {
         if (inView) {
@@ -35,9 +32,7 @@ const AboutUs = () => {
     <section
       className="AboutUs"
       id="about-us">
-      <div className="opac">
-      <video className="interiorCar" src={interiorCar} autoPlay loop muted />
-      </div>
+
       <motion.div
       className="AboutUs"
       ref={ref}
