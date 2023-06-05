@@ -42,7 +42,7 @@ const Navbar = () => {
           Reviews
         </li>
         <li className="navbar-item" onClick={() => handleNavLinkClick('contact-us')}>
-          Contact Us
+          Contacts
         </li>
       </ul>
     </nav>

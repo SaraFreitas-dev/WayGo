@@ -35,9 +35,9 @@ const AboutUs = () => {
     <section
       className="AboutUs"
       id="about-us">
-      
+      <div className="opac">
       <video className="interiorCar" src={interiorCar} autoPlay loop muted />
-
+      </div>
       <motion.div
       className="AboutUs"
       ref={ref}

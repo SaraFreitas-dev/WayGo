@@ -9,6 +9,8 @@
     z-index: 0;
     overflow: hidden;
   }
+
+  .opac{opacity: 1;}
   
   .interiorCar {
     position: fixed;
@@ -18,7 +20,8 @@
     height: 100%;
     object-fit: cover;
     z-index: -100;
-    opacity: 0.5;
+    opacity: 0.7;
+
   }
   
 
@@ -53,8 +56,7 @@
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    /*background-color: #7bed9f;*/
-    background-color: rgb(38, 29, 70);
+    background-color: #7bed9f;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -85,8 +87,7 @@
     height: 140%;
     border-radius: 50%;
     z-index: -1;
-   /* background-color: #7bed9f;*/
-   background-color: rgb(38, 29, 70);
+   background-color: #7bed9f;
     animation: pulse 3s infinite;
   }
   
@@ -107,14 +108,12 @@
   }
   
   .slime-bubble.violet {
-    /*background-color: violet;*/
-    background-color: rgb(38, 29, 70);
+    background-color: violet;
   }
   
   .slime-bubble.violet:before,
   .slime-bubble.violet:after {
-   /* background-color: violet;*/
-   background-color: rgb(38, 29, 70);
+   background-color: violet;
   }
   
   .slime-bubble.violet:hover {

@@ -16,6 +16,7 @@
   }
   
   .navbar-item {
+
     color: rgb(40, 40, 40);
     margin-right: 10px;
     cursor: pointer;
@@ -31,7 +32,7 @@
   
   @media (max-width: 750px) {
     .navbar {
-      font-size: 1rem;
+      font-size: 1.3rem;
     }
   
     .navbar-list {
@@ -64,6 +65,7 @@
       margin-top: 2rem;
       font-weight: bold;
       color: white;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       margin-right: 0;
       margin-left: 1rem;
     }

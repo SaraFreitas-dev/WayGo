@@ -46,7 +46,7 @@ function App() {
       <Navbar />
       <section className="main-section" id="main-section">
         <video className="background-video" src={entrance} autoPlay loop muted />
-        <div className="content_main">
+        ´<div className="content_main">
         <motion.div
       className="content-main"
       ref={ref}
