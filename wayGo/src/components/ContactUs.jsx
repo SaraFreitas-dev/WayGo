@@ -1,6 +1,7 @@
 import React from 'react'
 import "./ContactUs.css";
 import '../App.css';
+import bgContacts from "../assets/sintra.mp4"
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
@@ -27,6 +28,9 @@ export const ContactUs = () => {
     
   return (
     <section className="ContactUs" id="contact-us">
+    
+    <video className="contacts-bg" src={bgContacts} autoPlay loop muted />
+    
     <div className="contactUs-content">
     <motion.div
       className="contactUs-content"
@@ -40,6 +44,8 @@ export const ContactUs = () => {
       <p>Input to choose types of service user wants</p>
       <p>Left side image / goes up on phone</p>
       </motion.div>
+
+
     </div>
     
   </section>

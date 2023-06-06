@@ -2,10 +2,11 @@ import React from 'react';
 import './App.css';
 import AboutUs from './components/AboutUs';
 import Services from './components/Services';
-import Reviews from './components/Reviews';
+import Gallery from './components/Gallery';
 import ContactUs from './components/ContactUs';
 import entrance from '../src/assets/entrance.mp4';
 import Navbar from './components/Navbar';
+
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
@@ -85,7 +86,7 @@ function App() {
 
       <AboutUs/>
       <Services/>
-      <Reviews/>
+      <Gallery/>
       <ContactUs/>
     </div>
   );

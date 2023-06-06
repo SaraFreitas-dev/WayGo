@@ -38,8 +38,8 @@ const Navbar = () => {
         <li className="navbar-item" onClick={() => handleNavLinkClick('services')}>
           Services
         </li>
-        <li className="navbar-item" onClick={() => handleNavLinkClick('reviews')}>
-          Reviews
+        <li className="navbar-item" onClick={() => handleNavLinkClick('gallery')}>
+          Gallery
         </li>
         <li className="navbar-item" onClick={() => handleNavLinkClick('contact-us')}>
           Contacts

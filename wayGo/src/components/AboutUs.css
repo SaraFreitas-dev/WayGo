@@ -21,8 +21,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     margin-top: -1rem;
     z-index: 10;
   }
@@ -42,9 +42,9 @@
     justify-content: center;
     color: white;
     text-align: center;
-    z-index: -1;
     margin-left: auto;
     margin-right: auto;
+    z-index: -1;
     /* Animation */
     animation-name: float;
     animation-duration: 5s;
@@ -80,6 +80,7 @@
   
   .slime-bubble:hover {
     transform: scale(1.3);
+    z-index: -1;
   }
 
   .slime-bubble h2:hover {
@@ -149,6 +150,7 @@
     padding-bottom: 100%;
     padding-left: 6rem;
     bottom: 0;
+    z-index: 1;
   }
   
   .corner-containervd {
@@ -166,7 +168,9 @@
     max-width: 270px;
     padding-top: 100%;
     margin-bottom: -2rem;
+    z-index: 1;
   }
+
 
 
 
@@ -272,7 +276,8 @@
   
     .video-container {
       margin-bottom: -6rem;
-      max-width: 150px;
+      margin-top: 0;
+      max-width: 170px;
       z-index: -1;
       position: relative;
       display: flex;
@@ -285,12 +290,13 @@
     }
 
     .corner-video{
-      max-width: 150px;
+      max-width: 170px;
       margin-left: 1rem;
       margin-bottom: -0.3rem;
       padding-top: 1rem;
     }
 
+  
 
   }
   

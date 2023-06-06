@@ -1,12 +1,15 @@
 // AboutUs.jsx
 import React from 'react';
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 import '../App.css';
 import './AboutUs.css';
 import aboutVideo from "../assets/about-video.mp4";
 import cornerVd from "../assets/cornerVd.mp4"
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { Parallax } from 'react-parallax';
+
+
 
 const AboutUs = () => {
 
@@ -38,10 +41,7 @@ const AboutUs = () => {
   return (
     <section
       className="AboutUs"
-      id="about-us">
-
-
-        
+      id="about-us">     
 
         <div className="video-container">
   <video className="about-video" src={aboutVideo} autoPlay loop muted />
@@ -64,13 +64,14 @@ const AboutUs = () => {
 </div>
          </motion.div>
 
-
+         <div className="text-content">
         <p>This is the About Us section content.</p>
         <p>Who we are, when it started.</p>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
         <p>A simpler page with some animations with owners and car. </p>
         <br></br>
         <br></br>
+        </div>
         </motion.div>
 
 
@@ -86,9 +87,12 @@ const AboutUs = () => {
     <h2 className="about-title">Our Mission</h2>
   </div>
   </motion.div>
+
+  <div className="text-content">
         <p>This is the About Us section content.</p>
         <p>Who we are, when it started.</p>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+        </div>
         </motion.div>
 
         
