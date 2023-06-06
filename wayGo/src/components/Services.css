@@ -2,19 +2,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; 
-  background:rgb(42, 41, 41);
-  color: white;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.Services .background-bg {
+  position: absolute;
+  margin:0;
+  padding: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;  
   object-fit: cover;
-  margin: 0;
-  padding: 0;
-  z-index: 10;
+  filter: blur();
 }
+
+
 
 .motion-content {
   padding: 1rem;
+  position: relative;
 }
 
 .motion {
@@ -25,8 +34,52 @@
 .services-content {
   text-align: center;
   padding: 2rem;
-
+  position: relative;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  padding: 6rem;
+}
+
+.grid-container > div {
+  text-align: center;
+  justify-content: center;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.grid-container p{
+  font-size: 1.1rem;
+}
+
+
+.glassmorphim{
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 1rem;
+}
+
+
+
+
+
+
+@media (max-width: 1000px) {
+  .Services {
+    flex-direction: column;
+  }
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+}
+
 
 
 
@@ -34,10 +87,27 @@
   .Services {
     flex-direction: column;
   }
+
+
+  .grid-container p {
+    font-size: 1rem;
+  }
+
+
+  /* Remove the flex-grow property from grid-container > div */
+  .grid-container > div {
+    flex-grow: initial; /* Reset the flex-grow property */
+  }
   
-  .motion-content, .services-content {
-    margin: 1rem;
+  /* Set the grid-template-columns to auto to allow the divs to take up the necessary space */
+  .grid-container {
+    grid-template-columns: auto;
+    padding: 3rem;
+  }
+
+  /* Increase the height of the Services section */
+  .Services {
+    height: auto; /* Remove the fixed height */
+    min-height: 100vh; /* Set a minimum height to ensure it takes up the full viewport height */
   }
 }
-
-  

@@ -1,32 +1,33 @@
 .AboutUs {
-    min-height: 100vh;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 0;
-    overflow: hidden;
-    background-color: aliceblue;
-  }
+  max-height: 110vh;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  overflow: hidden;
+  background-color: aliceblue;
+  object-fit: cover;
+  position: relative; /* Add this line */
+}
 
   
-
   
   .about-content {
     text-align: center;
-    padding: 1rem 2rem;
     width: 100%;
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    margin-top: -17rem;
     margin-left: 1rem;
     margin-right: 1rem;
+    margin-top: -1rem;
+    z-index: 10;
   }
+
+  
   
 
   .slime-bubble {
@@ -140,16 +141,34 @@
   .video-container {
     display: flex;
     z-index: 2;
-    
   }
   
   .about-video {
     width: 100%;
-    max-width: 300px;
+    max-width: 270px;
     padding-bottom: 100%;
-    padding-left: 8rem;
+    padding-left: 6rem;
+    bottom: 0;
   }
   
+  .corner-containervd {
+   margin-right: 6rem;
+   margin-bottom: -0.2rem;
+    bottom: 0;
+    right: 6rem;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+  }
+  
+  .corner-video {
+    width: 100%;
+    max-width: 270px;
+    padding-top: 100%;
+    margin-bottom: -2rem;
+  }
+
+
 
 
 
@@ -159,44 +178,71 @@
     }
   
     .video-container {
-      margin-right: 2rem;
+      margin: 4rem;
       max-width: 200px;
     }
   
     .slime-bubble {
-      width: 125px;
-      height: 125px;
-      margin-top: 0.5rem;
+      width: 110px;
+      height: 110px;
+    }
+
+    .slime-bubble.green{
+      margin-top: 1.5rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .slime-bubble.violet{
+        margin-top: 0.3rem ;
+        margin-bottom: 0.3rem;
     }
 
     .slime-bubble h2{
         font-size: 1.3rem;
       }
+
+      .slime-bubble h2:hover {
+        font-size: 1.4rem;
+       }  
       
         .about-content {
-      padding: 2rem;
+      padding: 0rem;
       margin-left: 1rem;
       margin-right: 1rem;
+
     }
 
      .about-video{
-        margin-bottom: 10rem;
-        padding-left: 3rem;
+        margin-bottom: 0rem;
+        padding-left: 2rem;
      }
 
 
      .video-container {
-        margin-bottom: 15rem;
-        max-width: 200px;
+        max-width: 210px;
         z-index: -1;
       }
- 
-  
+
+      .AboutUs p {
+        font-size: 1rem;
+      }
+
+      .corner-containervd{
+        margin-right: 2rem;
+      }
+    
+      .corner-video{
+        width: 100%;
+        max-width: 210px;
+      }
   }
+
+
   
-  @media (max-width: 750px) {
+  @media (max-width: 900px) {
     .AboutUs {
       flex-direction: column;
+      max-height:fit-content;
     }
   
     .about-content {
@@ -206,36 +252,45 @@
     }
   
     .about-content p {
-      margin-left: 1rem;
-      margin-right: 1rem; 
+      margin-left: 1.5rem;
+      margin-right: 1.5rem; 
     }
   
     .imgAbout {
       max-height: 100px;
       margin-top: -2rem;
-    }
+    }    
 
     .about-video{
         margin-bottom: 0rem;
         padding-bottom: 1rem;
+        position: relative;
+      display: flex;
+      justify-content: center; /* Center the video horizontally */
+      align-items: center; /* Center the video vertically */
      }
   
     .video-container {
-      margin-bottom: 9rem;
+      margin-bottom: -6rem;
       max-width: 150px;
       z-index: -1;
-    }
-  
-    .AboutUs h3 {
-      font-size: 1rem;
+      position: relative;
+      display: flex;
+      justify-content: center; /* Center the video horizontally */
+      align-items: center; /* Center the video vertically */
     }
   
     .AboutUs p {
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
 
- 
- 
+    .corner-video{
+      max-width: 150px;
+      margin-left: 1rem;
+      margin-bottom: -0.3rem;
+      padding-top: 1rem;
+    }
+
 
   }
   

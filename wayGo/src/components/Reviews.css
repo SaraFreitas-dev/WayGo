@@ -17,7 +17,7 @@
     height: 100%;
     background-size: cover;
     background-position: center top; /* Adjust the background position */
-    filter: blur(0.2rem);
+    filter: blur(1rem);
     z-index: -1; /* Ensure the pseudo-element is behind the content */
   }
   

@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import '../App.css';
 import './AboutUs.css';
 import aboutVideo from "../assets/about-video.mp4";
+import cornerVd from "../assets/cornerVd.mp4"
 
 const AboutUs = () => {
 
@@ -13,10 +14,16 @@ const AboutUs = () => {
         visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
         hidden: { opacity: 0, scale: 0 }
       };
+    
+      /*Second half of section with delay */
+      const boxVariant2 = {
+        visible: { opacity: 1, scale: 1, transition: { duration: 1, delay: 0.5 } },
+        hidden: { opacity: 0, scale: 0 }
+      };   
 
       const control = useAnimation();
       const [ref, inView] = useInView({
-        threshold: 0.1, // to make sure the animation triggers
+        threshold: 0.5, // to make sure the animation triggers
       });
       useEffect(() => {
         if (inView) {
@@ -33,13 +40,7 @@ const AboutUs = () => {
       className="AboutUs"
       id="about-us">
 
-      <motion.div
-      className="AboutUs"
-      ref={ref}
-      variants={boxVariant}
-      initial="hidden"
-      animate={control}
-    >
+
         
 
         <div className="video-container">
@@ -48,6 +49,13 @@ const AboutUs = () => {
 
 
       <div className="about-content">
+      <motion.div
+      className="text1"
+      ref={ref}
+      variants={boxVariant}
+      initial="hidden"
+      animate={control}
+    >
       {/*  <video className="corner-video" src={carCanva} autoPlay loop muted /> */}
         <motion.div   whileHover={{scale: 1.3, rotate: [0, -10, 10, -10, 0] }}>
                     
@@ -63,19 +71,33 @@ const AboutUs = () => {
         <p>A simpler page with some animations with owners and car. </p>
         <br></br>
         <br></br>
+        </motion.div>
 
+
+        <motion.div
+      className="text2"
+      ref={ref}
+      variants={boxVariant2}
+      initial="hidden"
+      animate={control}
+    >
         <motion.div   whileHover={{scale: 1.3, rotate: [0, -10, 10, -10, 0] }}>
         <div className="slime-bubble violet">
     <h2 className="about-title">Our Mission</h2>
   </div>
   </motion.div>
-
         <p>This is the About Us section content.</p>
         <p>Who we are, when it started.</p>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+        </motion.div>
+
+        
         </div>
 
-</motion.div>
+        <div className="corner-containervd">
+  <video className="corner-video" src={cornerVd} autoPlay loop muted />
+</div>
+
     </section>
   );
 };

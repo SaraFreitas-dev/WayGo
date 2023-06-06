@@ -13,18 +13,18 @@ import { useEffect } from "react";
 function App() {
 
   const boxVariant = {
-    visible: { opacity: 1, transform: 'translateX(0)', transition: { duration: 2 } },
-    hidden: { opacity: 0, transform: 'translateX(-30%)' }
+    visible: { opacity: 1, transform: 'translateX(0)', transition: { duration: 3 } },
+    hidden: { opacity: 0, transform: 'translateX(-40%)' }
   };
   
   const slowVariant = {
-    visible: { opacity: 1, transform: 'translateX(0)', transition: { duration: 5 } },
+    visible: { opacity: 1, transform: 'translateX(0)', transition: { duration: 6 } },
     hidden: { opacity: 0, transform: 'translateX(-160%)' }
   };
   
   const reverseVariant = {
-    visible: { opacity: 1, transform: 'translateX(0)', transition: { duration: 2 } },
-    hidden: { opacity: 0, transform: 'translateX(30%)' }
+    visible: { opacity: 1, transform: 'translateX(0)', transition: { duration: 3 } },
+    hidden: { opacity: 0, transform: 'translateX(40%)' }
   };
 
 
