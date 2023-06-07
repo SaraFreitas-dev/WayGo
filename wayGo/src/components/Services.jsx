@@ -2,7 +2,7 @@ import React from 'react';
 import "./Services.css";
 import '../App.css';
 import bgServices from "../assets/bgServices.mp4";
-;import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
@@ -33,7 +33,7 @@ const Services = () => {
 
  return (
   <section className="Services" id="services">
-    <video className="background-bg" src={bgServices} autoPlay loop muted />
+    
     {/*<motion.div
       className="motion-content"
       ref={ref}
@@ -71,7 +71,6 @@ const Services = () => {
   variants={goRightVariant}
   initial="hidden"
   animate={control}
-  transition={{ delay: 1 }}
 >
   <p>
     What Ipsum is simply dummy text of the printing and typesetting industry.
@@ -99,7 +98,7 @@ const Services = () => {
 
      <motion.div id="4" 
      className='glassmorphim' 
-     whileHover={{ scale: 1.3 }}
+     whileHover={{ scale: 1.3 , zIndex: 10}}
      variants={goRightVariant}
     initial="hidden"
     animate={control}

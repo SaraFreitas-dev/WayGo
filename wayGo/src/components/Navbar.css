@@ -1,11 +1,11 @@
 .navbar {
     position: fixed;
     z-index: 999;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     margin: 0;
     padding-left: 1rem;
     padding-right: 1rem;
-    top: 2rem;
+    top: 1.5rem;
   }
   
   .navbar-list {
@@ -16,25 +16,30 @@
   }
   
   .navbar-item {
-
     color: rgb(40, 40, 40);
     margin-right: 10px;
     cursor: pointer;
-    margin-left: 2rem;
+    margin-left: 2.3rem;
     transition: color 0.3s ease, transform 0.3s ease;
   }
+  
   
   .navbar-item:hover {
-    transform: scale(2);
-    transition: color 0.3s ease, transform 0.3s ease;
+    transform: scale(1.8);
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
+ 
   
-  @media (max-width: 750px) {
+  @media (max-width: 1000px) {
     .navbar {
       font-size: 1.3rem;
     }
-  
+  }
+
+
+  @media (max-width: 750px) {
+
     .navbar-list {
         display: none;
         position: fixed;
