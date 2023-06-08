@@ -29,13 +29,13 @@ const Reviews = () => {
     <section className="Gallery" id="gallery">
     <div className="gallery-content">
     <motion.div
-      className="Gallery"
+      className="gallery-content"
       ref={ref}
       variants={boxVariant}
       initial="hidden"
       animate={control}
     >
-      <h3>Reviews</h3>
+      <h3>Gallery</h3>
       <p>Add slide animation of reviews in tripAdviser</p>
       </motion.div>
     </div>

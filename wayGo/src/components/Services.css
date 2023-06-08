@@ -8,6 +8,7 @@
   overflow: hidden;
   background: url("../assets/servicesBg.jpg");
 background-size: cover;
+background-position: center center;
 }
 
 

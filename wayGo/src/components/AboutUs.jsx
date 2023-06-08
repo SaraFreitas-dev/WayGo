@@ -26,7 +26,7 @@ const AboutUs = () => {
 
       const control = useAnimation();
       const [ref, inView] = useInView({
-        threshold: 0.5, // to make sure the animation triggers
+        threshold: 0.6, // to make sure the animation triggers
       });
       useEffect(() => {
         if (inView) {
