@@ -25,9 +25,7 @@ const AboutUs = () => {
       };   
 
       const control = useAnimation();
-      const [ref, inView] = useInView({
-        threshold: 0.6, // to make sure the animation triggers
-      });
+      const [ref, inView] = useInView();
       useEffect(() => {
         if (inView) {
           control.start("visible");
@@ -36,6 +34,16 @@ const AboutUs = () => {
         }
       }, [control, inView]);
     
+      const [ref2, inView2] = useInView(); 
+  useEffect(() => {
+    if (inView2) {
+      control.start('visible');
+    } else {
+      control.start('hidden');
+    }
+  }, [control, inView2]);
+
+
     
 
   return (
@@ -57,7 +65,9 @@ const AboutUs = () => {
       animate={control}
     >
       {/*  <video className="corner-video" src={carCanva} autoPlay loop muted /> */}
-        <motion.div   whileHover={{scale: 1.3, rotate: [0, -10, 10, -10, 0] }}>
+        <motion.div   
+        whileHover={{scale: 1.3, rotate: [0, -10, 10, -10, 0] }}
+        >
                     
        <div className="slime-bubble green">
   <h2 className="about-title">About Us</h2>

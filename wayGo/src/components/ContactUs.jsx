@@ -1,7 +1,7 @@
 import React from 'react';
 import './ContactUs.css';
 import '../App.css';
-import bgContacts from '../assets/last.jpg';
+import bgContacts from '../assets/man.avif';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';

@@ -48,6 +48,7 @@
 h1 {
   font-size: 8rem;
   margin-right: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 h2 {
@@ -78,6 +79,9 @@ p{
   display: inline-block;
   margin-top: 1rem;
 }
+
+
+
 
 
 @keyframes revealText {
@@ -112,6 +116,11 @@ p{
     transform: translateX(0);
   }
 }
+
+
+
+
+
 
 @media (max-width: 1000px) {
   h1 {
