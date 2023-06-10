@@ -8,26 +8,47 @@ import { useEffect } from 'react';
 import { Parallax } from 'react-parallax';
 
 const Services = () => {
-  const control = useAnimation();
-  const [ref, inView] = useInView();
+  const control1 = useAnimation();
+  const control2 = useAnimation();
+  const control3 = useAnimation();
+  const control4 = useAnimation();
+
+  const [ref1, inView1] = useInView();
+  const [ref2, inView2] = useInView();
+  const [ref3, inView3] = useInView();
+  const [ref4, inView4] = useInView();
 
   useEffect(() => {
-    if (inView) {
-      control.start('visible');
+    if (inView1) {
+      control1.start('visible');
     } else {
-      control.start('hidden');
+      control1.start('hidden');
     }
-  }, [control, inView]);
-
-  const [ref2, inView2] = useInView();
+  }, [control1, inView1]);
 
   useEffect(() => {
     if (inView2) {
-      control.start('visible');
+      control2.start('visible');
     } else {
-      control.start('hidden');
+      control2.start('hidden');
     }
-  }, [control, inView2]);
+  }, [control2, inView2]);
+
+  useEffect(() => {
+    if (inView3) {
+      control3.start('visible');
+    } else {
+      control3.start('hidden');
+    }
+  }, [control3, inView3]);
+
+  useEffect(() => {
+    if (inView4) {
+      control4.start('visible');
+    } else {
+      control4.start('hidden');
+    }
+  }, [control4, inView4]);
 
 
   const goLeftVariant = {
@@ -48,11 +69,11 @@ const Services = () => {
             <motion.div
               id="1"
               className="glassmorphim"
-              ref={ref}
-              whileHover={{ scale: 1.3, zIndex: 10 }}
+              ref={ref1}
+              whileHover={{ scale: 1.3, fontSize: 1.2 }}
               variants={goLeftVariant}
               initial="hidden"
-              animate={control}
+              animate={control1}
             >
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -64,13 +85,13 @@ const Services = () => {
             <motion.div
               id="2"
               className="glassmorphim"
-              ref={ref}
+              ref={ref2}
               whileHover={{ scale: 1.3, zIndex: 10 }}
               variants={goRightVariant}
               initial="hidden"
-              animate={control}
+              animate={control2}
             >
-              <p>
+              <p>2
                 What Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                 industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
                 scrambled it to make a type specimen book.
@@ -80,11 +101,11 @@ const Services = () => {
             <motion.div
               id="3"
               className="glassmorphim"
-              ref={ref2}
+              ref={ref3}
               whileHover={{ scale: 1.3, zIndex: 10 }}
               variants={goLeftVariant}
               initial="hidden"
-              animate={control}
+              animate={control3}
             >
               <p>
                 This is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -96,11 +117,11 @@ const Services = () => {
             <motion.div
               id="4"
               className="glassmorphim"
-              ref={ref2}
+              ref={ref4}
               whileHover={{ scale: 1.3, zIndex: 10 }}
               variants={goRightVariant}
               initial="hidden"
-              animate={control}
+              animate={control4}
             >
               <p>
                 Something is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the

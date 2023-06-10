@@ -4,12 +4,32 @@ import './Navbar.css';
 const Navbar = () => {
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   
+
+
     const handleNavLinkClick = (sectionId) => {
       const section = document.getElementById(sectionId);
       if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
+        const targetPosition = section.offsetTop;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 200; // Duration of the scroll animation in milliseconds
+        let startTimestamp = null;
+    
+        const scrollStep = (timestamp) => {
+          if (!startTimestamp) startTimestamp = timestamp;
+          const elapsed = timestamp - startTimestamp;
+          const scrollProgress = Math.min(elapsed / duration, 1);
+          const scrollDistance = distance * scrollProgress;
+          const scrollPosition = startPosition + scrollDistance;
+          window.scrollTo(0, scrollPosition);
+          if (scrollProgress < 1) {
+            window.requestAnimationFrame(scrollStep);
+          }
+        };
+    
+        window.requestAnimationFrame(scrollStep);
       }
-      // Only close the navbar if it is currently open
+    
       if (isNavbarOpen) {
         setIsNavbarOpen(false);
       }

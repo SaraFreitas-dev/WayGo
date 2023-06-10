@@ -11,24 +11,11 @@ background-size: cover;
 background-position: center center;
 }
 
-
-
-
-
-.motion-content {
-  padding: 1rem;
-  position: relative;
-}
-
-.motion {
-  height: 100%;
-  max-height: 300px;
-}
-
 .services-content {
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   position: relative;
+  transform: translateZ(0);
 }
 
 .grid-container {
@@ -51,10 +38,10 @@ background-position: center center;
 
 
 .glassmorphim{
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(239, 237, 237, 0.3);
   box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 1rem;
 }
 
@@ -96,7 +83,7 @@ background-position: center center;
   /* Set the grid-template-columns to auto to allow the divs to take up the necessary space */
   .grid-container {
     grid-template-columns: auto;
-    padding: 4rem;
+    padding: 2rem;
   }
 
   /* Increase the height of the Services section */

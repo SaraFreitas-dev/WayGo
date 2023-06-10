@@ -1,4 +1,3 @@
-// AboutUs.jsx
 import React from 'react';
 import { motion, useAnimation } from "framer-motion";
 import '../App.css';
@@ -17,15 +16,27 @@ const AboutUs = () => {
         visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
         hidden: { opacity: 0, scale: 0 }
       };
+  
+      
+      const videoAnim = {
+        hidden: {
+          scale: 0,
+          rotate: 180
+        },
+        visible: {
+          scale: 1,
+          rotate: 360,
+          transition: { type: "spring", stiffness: 260, damping: 150 }
+        }
+      };
     
-      /*Second half of section with delay */
-      const boxVariant2 = {
-        visible: { opacity: 1, scale: 1, transition: { duration: 1, delay: 0.5 } },
-        hidden: { opacity: 0, scale: 0 }
-      };   
 
       const control = useAnimation();
+      const control2 = useAnimation();
       const [ref, inView] = useInView();
+      const [ref2, inView2] = useInView();
+
+
       useEffect(() => {
         if (inView) {
           control.start("visible");
@@ -33,16 +44,15 @@ const AboutUs = () => {
           control.start("hidden");
         }
       }, [control, inView]);
-    
-      const [ref2, inView2] = useInView(); 
+
+
   useEffect(() => {
     if (inView2) {
-      control.start('visible');
+      control2.start('visible');
     } else {
-      control.start('hidden');
+      control2.start('hidden');
     }
-  }, [control, inView2]);
-
+  }, [control2, inView2]);
 
     
 
@@ -52,7 +62,15 @@ const AboutUs = () => {
       id="about-us">     
 
         <div className="video-container">
+        <motion.div
+      className="corner-containervd"
+      ref={ref}
+      variants={videoAnim}
+      initial="hidden"
+      animate={control}
+    >
   <video className="about-video" src={aboutVideo} autoPlay loop muted />
+</motion.div>
 </div>
 
 
@@ -87,10 +105,10 @@ const AboutUs = () => {
 
         <motion.div
       className="text2"
-      ref={ref}
-      variants={boxVariant2}
+      ref={ref2}
+      variants={boxVariant}
       initial="hidden"
-      animate={control}
+      animate={control2}
     >
         <motion.div   whileHover={{scale: 1.3, rotate: [0, -10, 10, -10, 0] }}>
         <div className="slime-bubble violet">
@@ -109,7 +127,15 @@ const AboutUs = () => {
         </div>
 
         <div className="corner-containervd">
+        <motion.div
+      className="corner-containervd"
+      ref={ref2}
+      variants={videoAnim}
+      initial="hidden"
+      animate={control2}
+    >
   <video className="corner-video" src={cornerVd} autoPlay loop muted />
+</motion.div>
 </div>
 
     </section>
